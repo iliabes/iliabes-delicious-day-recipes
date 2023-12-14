@@ -6,17 +6,8 @@ export const axiosClient = axios.create({
 })
 
 
-export const axiosClientLetter = axios.create({
-    baseURL: 'https://www.themealdb.com/api/json/v1/1/'
-})
-
-export const axiosClientIngridient = axios.create({
-    baseURL: 'https://www.themealdb.com/api/json/v1/1/'
-})
 
 
 export default {
-    axiosClient,
-    axiosClientLetter,
-    axiosClientIngridient
+    axiosClient
 }

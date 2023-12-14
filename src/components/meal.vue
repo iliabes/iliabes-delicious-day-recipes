@@ -10,7 +10,6 @@
             <router-link  class="p-2  border-b rounded-md bg-orange-400  hover:bg-purple-400" :to="{name:'pageMeals',params:{id:props.meal.idMeal}}">View</router-link>
             </div> 
           </div>
-          
       </div>
 
 </template>

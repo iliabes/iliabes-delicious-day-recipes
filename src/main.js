@@ -8,6 +8,7 @@ import home from './page/home.vue'
 import sortIngridiebt from './page/sortIngridient.vue'
 import sortLetter from './page/sortLetter.vue'
 import pageMeals from './page/pageMeals.vue'
+import ingridient from './page/ingridient.vue'
 import vuex from 'vuex'
 import store from './store/index'
 
@@ -26,17 +27,19 @@ const router = createRouter({
         component: sortIngridiebt
       },
       {
-        path: '/sortLetter',
-        component: sortLetter
-      },
-      {
         name:'sortLetter',
         path: '/sortLetter/:letter?',
         component: sortLetter
       },
       {
-        path: '/serch',
+        name:'search',
+        path: '/serch/:ingrid?',
         component: serch,
+      },
+      {
+        name:'ingridient',
+        path: '/ingridient/:ingrid',
+        component: ingridient,
       },
       {
         path: '/pageMeals/:id?',
