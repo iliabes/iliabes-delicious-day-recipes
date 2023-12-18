@@ -1,7 +1,10 @@
 
 
 export default {
-    searhedMeals:[],
+    searhedMeals:['1'],
     searhedMealsIngridients:[],
-    searhedMealsLetter:[]
+    searhedMealsLetter:[],
+    searhedMealsCategories:[],
+    searhedMealsLands:[],
+    searhedMealsRandom:[]
 }

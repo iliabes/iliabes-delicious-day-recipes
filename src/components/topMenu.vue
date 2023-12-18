@@ -1,10 +1,13 @@
 <template>
-  <div class="flex  justify-between h-16 bg-red-100 items-center">
-    <router-link class="p-2 inline-flex items-center  rounded-md bg-orange-400 hover:bg-purple-500" to="/">Home</router-link>
+  <div class="flex  justify-between  bg-red-100 items-center px-5">
+    <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/">Home</router-link>
     <div class="flex items-center gap-1">
-      <router-link class="p-2 inline-flex items-center border-b rounded-md bg-orange-400  hover:bg-purple-400" to="/serch">serch by ingridient</router-link>
-      <router-link class="p-2 inline-flex items-center border-b rounded-md bg-orange-400  hover:bg-purple-400" to="/sortIngridiebt">search by name</router-link>
-      <router-link class="p-2 inline-flex items-center border-b rounded-md bg-orange-400  hover:bg-purple-400" to="/sortLetter">search by letter</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/serch">serch by ingridient</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/serchName">search by name</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/sortLetter">search by letter</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/randomMeals">random meals</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/mealsLands">meal by lands</router-link>
+      <router-link class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" to="/foodCategories">food by categories</router-link>
     </div>
 
   </div>

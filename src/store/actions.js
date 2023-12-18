@@ -26,6 +26,24 @@ export function searhMealIngridients({commit},keywords){
 }
 
 
+export function searhedMealsCategories({commit},keywords){
+    axiosClient.get(`categories.php`)
+    .then(({data})=>{
+        console.log('searhMealIngri',data)
+        commit('searhedMealsCategories',data)
+    })
+}
+
+export function searhActionMealsRandom({commit},){
+    axiosClient.get(`list.php?i=list`)
+    .then(({data})=>{
+        console.log('searhMealIngri',data)
+        commit('searhedMealsRandom',data)
+    })
+}
+
+
+
 
 
 

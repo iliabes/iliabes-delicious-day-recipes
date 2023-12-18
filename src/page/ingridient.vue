@@ -7,7 +7,7 @@
 
 
   let route = useRoute()
-  let ingridient = route.params.ingrid
+
   let meals = computed(()=>store.state.searhedMealsIngridients)
 
 

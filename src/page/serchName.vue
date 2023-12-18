@@ -28,8 +28,10 @@ function changeInput(){
 
 <template>
   <input ref='keywords' value="salmon"    @input="changeInput" type="text" class="border-2 border-grey-200 w-full" />
+  <!-- <pre>{{meals}}</pre> -->
   <div class="grid grid-cols-3 gap-3">
-    <meal :meal="meal" v-for="meal in meals" :key="meal.idMeal"/>
+    
+    <meal ::linkYoutube='meal.strYoutube' :id=meal.mealId :title="meal.strMeal" :img='meal.strMealThumb' v-for="meal in meals" :key="meal"/>
 </div>
 
 
