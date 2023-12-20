@@ -1,5 +1,6 @@
 import {axiosClient} from "../axiosClient";
-
+import {axiosClientEdaman} from "../axiosClient"; axiosClientEdamanAlcohol
+import {axiosClientEdamanAlcohol} from "../axiosClient";
 
 export function searhMeal({commit},keywords){
     axiosClient.get(`search.php?s=${keywords}`)
@@ -25,6 +26,14 @@ export function searhMealIngridients({commit},keywords){
     })
 }
 
+export function searhedIngridients({commit},keywords){
+    axiosClient.get(`list.php?i=list`)
+    .then(({data})=>{
+        console.log('searhMealIngri',data)
+        commit('searhedIngridients',data)
+    })
+}
+searhedIngridients
 
 export function searhedMealsCategories({commit},keywords){
     axiosClient.get(`categories.php`)
@@ -34,44 +43,37 @@ export function searhedMealsCategories({commit},keywords){
     })
 }
 
-export function searhActionMealsRandom({commit},){
-    axiosClient.get(`list.php?i=list`)
+export function searhMealsRandom({commit}){
+    axiosClient.get(`random.php`)
     .then(({data})=>{
-        console.log('searhMealIngri',data)
+        console.log('searhedMealsRandom',data)
+        commit('searhedMealsRandom',data)
+    })
+    axiosClient.get(`random.php`)
+    .then(({data})=>{
+        console.log('searhedMealsRandom',data)
         commit('searhedMealsRandom',data)
     })
 }
 
 
+export function searhMealsLands({commit},land){
+    axiosClientEdaman.defaults.params.cuisineType = land
+    axiosClientEdaman.get()
+        .then(({data})=>{
+            commit('searhedMealsLands',data.hits)
+        })
+}
+
+
+export function searhAlcohol({commit},land){
+    axiosClientEdamanAlcohol.get()
+        .then(({data})=>{
+            commit('searhedMealsAlcohol',data.hits)
+        })
+}
 
 
 
 
-
-// import axios from "axios";
-
-// export default {
-//     actions: {
-//         async getPost({state,commit}) {
-
-//             try {
-                
-//                 let data = await axios.get(
-//                     "https://jsonplaceholder.typicode.com/posts", {
-//                         params: {
-//                             _page: state.page,
-//                             _limit: state.limit,
-//                         },
-//                     }
-//                 );
-//                 commit('setPost',data.data)
-//             } catch {
-//                 console.log("err");
-//             } finally {
-//                 // this.isPostLoading = true;
-//             }
-//         },
-//     },
-//     namespaced: true,
-// }
 

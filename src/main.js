@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
 import components from './components/UI/index'
-import serch from './page/serch.vue'
+import searchIngrid from './page/searchIngrid.vue'
 import home from './page/home.vue'
 import serchName from './page/serchName.vue'
 import sortLetter from './page/sortLetter.vue'
@@ -11,7 +11,7 @@ import pageMeals from './page/pageMeals.vue'
 import ingridient from './page/ingridient.vue'
 import foodCategories from './page/foodCategories.vue'
 import mealLands from './page/mealLands.vue'
-import randomMeals from './page/randomMeals.vue'
+import alcoholCocktail from './page/alcoholCocktail.vue'
 import vuex from 'vuex'
 import store from './store/index'
 
@@ -38,9 +38,9 @@ const router = createRouter({
     component: foodCategories
   },
   {
-    path: '/randomMeals',
-    name:'randomMeals',
-    component: randomMeals
+    path: '/alcoholCocktail',
+    name:'alcoholCocktail',
+    component: alcoholCocktail
   },
   {
     path: '/mealsLands',
@@ -53,9 +53,9 @@ const router = createRouter({
     component: sortLetter
   },
   {
-    name:'search',
-    path: '/serch/:ingrid?',
-    component: serch,
+    name:'searchIngrid',
+    path: '/searchIngrid/:ingrid?',
+    component: searchIngrid,
   },
   {
     name:'ingridient',

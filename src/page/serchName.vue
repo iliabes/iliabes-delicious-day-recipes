@@ -31,7 +31,7 @@ function changeInput(){
   <!-- <pre>{{meals}}</pre> -->
   <div class="grid grid-cols-3 gap-3">
     
-    <meal ::linkYoutube='meal.strYoutube' :id=meal.mealId :title="meal.strMeal" :img='meal.strMealThumb' v-for="meal in meals" :key="meal"/>
+    <meal :linkYoutube='meal.strYoutube' :id=meal.mealId :title="meal.strMeal" :img='meal.strMealThumb' v-for="meal in meals" :key="meal"/>
 </div>
 
 
