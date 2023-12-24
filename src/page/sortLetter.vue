@@ -17,27 +17,23 @@ watch(route,()=>{
 
 
 onMounted(async()=>{
-  console.log(route.params);
   store.dispatch('searhMealLetter',route.params.letter)
-  console.log(meals);
 })
 
 </script>
 
 
 <template>
-  <div class="flex flex-row justify-center gap-1  m-5">
-  <!-- <router-link v-for='letter in letters'  :key='letter'   to="/about"> {{letter}}</router-link> -->
+  <div class="flex flex-row justify-center gap-1  m-5 flex-wrap ">
   <router-link  v-for='letter in letters' :key='letter' :to="{name:`sortLetter`,params:{letter} }">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold  px-1 rounded border-1 border-black-700">
+      <button class="bg-my-accentdark hover:bg-blue-700 text-white font-bold  px-1 rounded border-1 border-black-700 tracking-tight">
             {{letter}}
       </button>
-
   </router-link>
 
   </div>
-  <!-- <pre>{{meals}}</pre> -->
-  <div class="grid grid-cols-3 gap-3">
+  <div class="p-1">
+  <div class="grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
       <meal 
         :hash1="item.strCategory"
         :hash2="item.Portuguese"
@@ -50,6 +46,6 @@ onMounted(async()=>{
       />
 
   </div>
-
+</div>
 </template>
 

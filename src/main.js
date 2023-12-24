@@ -12,6 +12,7 @@ import ingridient from './page/ingridient.vue'
 import foodCategories from './page/foodCategories.vue'
 import mealLands from './page/mealLands.vue'
 import alcoholCocktail from './page/alcoholCocktail.vue'
+import pageMealsEda from './page/pageMealsEda.vue'
 import vuex from 'vuex'
 import store from './store/index'
 
@@ -66,6 +67,11 @@ const router = createRouter({
     path: '/pageMeals/:id?',
     name:'pageMeals',
     component: pageMeals,
+  },
+  {
+    path: '/pageMealsEda/:id?',
+    name:'pageMealsEda',
+    component: pageMealsEda,
   },
 
 ],

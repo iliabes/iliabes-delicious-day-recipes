@@ -9,7 +9,7 @@ export  function searhedMealsIngridients(state,meals){
 export  function searhedIngridients(state,meals){
     
     state.searhedIngridients = meals.meals
-    console.log(state.searhedIngridients)
+
 }
 
 
@@ -32,4 +32,8 @@ export  function searhedMealsRandom(state,meals){
 
 export  function searhedMealsAlcohol(state,meals){
     state.searhedAlcohol = meals
+}
+
+export  function earhedMealsEdaman(state,meals){
+    state.earhedMealsEdaman = meals.recipe
 }

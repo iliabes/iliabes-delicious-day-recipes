@@ -29,8 +29,16 @@ export const axiosClientEdamanAlcohol = axios.create({
     }
 });
 
+export const axiosClientEdamanMeal = axios.create({
+    baseURL: 'https://api.edamam.com/api/recipes/v2/',
+    params: {
+        app_id: import.meta.env.VITE_APP_ID,
+        app_key: import.meta.env.VITE_APP_KEY,
+        type: "public",
+    }
+});
 
 
 export default {
-    axiosClient,axiosClientEdaman,axiosClientEdamanAlcohol
+    axiosClient,axiosClientEdaman,axiosClientEdamanAlcohol,axiosClientEdamanMeal
 }

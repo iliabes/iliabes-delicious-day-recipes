@@ -16,36 +16,43 @@
     axiosClient.get(`lookup.php?i=${route.params.id}`)
     .then(({data})=>{
         meal.value = data.meals[0]
-        console.log(meal);
-
     })
   })
+  
 </script>
 
 
+
 <template>
- <!-- <pre>{{meal}}</pre>  -->
- <div class="w-[600px] mx-auto my-10 p-3 border-red-200 border-2 flex flex-col rounded-md">
-    <h1 class="font-bold text-lg mb-5 ">{{meal.strMeal}}</h1>
-    <img :src='meal.strMealThumb' alt="">
-    <p class="mt-3">{{meal.strInstructions}}</p>
-    <div class="flex ">
-      <ul class="flex flex-col">
-        <li v-show="meal[`strIngredient${index+1}`]"  v-for="(item,index) in 20" :key=index class='list-none' >{{index}} {{meal[`strIngredient${index+1}`]}}</li>
+<div class="contCard">
+  <div class="contMeal">
+    <h1 class="2xl:my-10 font-bold text-lg my-5 text-center">{{meal.strMeal}}</h1>
+    <img class=" " :src='meal.strMealThumb' alt="">
+    <p class="2xl:my-12  my-8 text-base">{{meal.strInstructions}}</p>
+    <div class="flex mt-3">
+      <ul class="flex flex-col ">
+        <li v-show="meal[`strIngredient${index+1}`]"  v-for="(item,index) in 20" :key=index class='list-none italic' > 🔸 {{meal[`strIngredient${index+1}`]}}</li>
       </ul>
       <ul  class="flex flex-col mx-5">
-        <li v-for="(item,index) in 20" :key=index class='list-none' > {{meal[`strMeasure${index+1}`]}}</li>
+        <li v-for="(item,index) in 20" :key=index class='list-none italic' > {{meal[`strMeasure${index+1}`]}}</li>
       </ul>
-
     </div>
-    
-       <yotubeBtn :linkYoutube="meal.strYoutube"/>
+  <yotubeBtn :linkYoutube="meal.strYoutube"/>
   </div>
- 
+</div>
 </template>
   
 
 
 <style>
+
+  .contMeal{
+    @apply 2xl:px-56 xl:px-32 lg:px-28 lg:border lg:border-my-accent  md:px-14 my-10 p-3 justify-center items-center flex flex-col rounded-md
+  } 
+  .contCard{
+      @apply 2xl:px-28 xl:px-24 lg:px-10
+      
+  }
+
 
 </style>

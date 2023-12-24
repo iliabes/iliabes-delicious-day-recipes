@@ -1,7 +1,8 @@
-<template>
+<template >
+<div class="bg-my-primary h-auto">
   <top-menu/>
     <router-view />
-
+</div>
 </template>
 
 

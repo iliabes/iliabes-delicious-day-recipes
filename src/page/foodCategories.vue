@@ -20,7 +20,6 @@ onMounted(() => {
 
 <template>
   <h1>this is food categories</h1>
-  <!-- <pre>{{ meals }}</pre> -->70
   <div class="grid grid-cols-3 gap-1">
     <div v-for="item in meals" :key="item.idCategory" class="border max-h-90">
       <img :src="item.strCategoryThumb" class="w-full" alt="..." />

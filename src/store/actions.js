@@ -1,11 +1,13 @@
 import {axiosClient} from "../axiosClient";
 import {axiosClientEdaman} from "../axiosClient"; axiosClientEdamanAlcohol
 import {axiosClientEdamanAlcohol} from "../axiosClient";
+import {axiosClientEdamanMeal} from "../axiosClient";
+import axios from "axios";
 
 export function searhMeal({commit},keywords){
     axiosClient.get(`search.php?s=${keywords}`)
     .then(({data})=>{
-        console.log(data)
+
         commit('setSearchMeals',data.meals)
     })
 }
@@ -13,7 +15,7 @@ export function searhMeal({commit},keywords){
 export function searhMealLetter({commit},keywords){
     axiosClient.get(`search.php?f=${keywords}`)
     .then(({data})=>{
-        console.log('searhMealLetter',data)
+
         commit('searhedMealsLetter',data.meals)
     })
 }
@@ -21,7 +23,7 @@ export function searhMealLetter({commit},keywords){
 export function searhMealIngridients({commit},keywords){
     axiosClient.get(`filter.php?i=${keywords}`)
     .then(({data})=>{
-        console.log('searhMealIngri',data)
+
         commit('searhedMealsIngridients',data.meals)
     })
 }
@@ -29,7 +31,7 @@ export function searhMealIngridients({commit},keywords){
 export function searhedIngridients({commit},keywords){
     axiosClient.get(`list.php?i=list`)
     .then(({data})=>{
-        console.log('searhMealIngri',data)
+
         commit('searhedIngridients',data)
     })
 }
@@ -38,7 +40,7 @@ searhedIngridients
 export function searhedMealsCategories({commit},keywords){
     axiosClient.get(`categories.php`)
     .then(({data})=>{
-        console.log('searhMealIngri',data)
+
         commit('searhedMealsCategories',data)
     })
 }
@@ -46,12 +48,12 @@ export function searhedMealsCategories({commit},keywords){
 export function searhMealsRandom({commit}){
     axiosClient.get(`random.php`)
     .then(({data})=>{
-        console.log('searhedMealsRandom',data)
+
         commit('searhedMealsRandom',data)
     })
     axiosClient.get(`random.php`)
     .then(({data})=>{
-        console.log('searhedMealsRandom',data)
+
         commit('searhedMealsRandom',data)
     })
 }
@@ -74,6 +76,12 @@ export function searhAlcohol({commit},land){
 }
 
 
-
+export function earhedMealsEdaman({commit},param){
+    axiosClientEdamanMeal.get( param )
+        .then(({data})=>{
+            console.log('eadamam',data);
+            commit('earhedMealsEdaman',data)
+        })
+}
 
 
