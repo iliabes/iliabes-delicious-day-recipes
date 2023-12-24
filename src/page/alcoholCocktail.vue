@@ -1,8 +1,5 @@
 <script setup>
   import { computed, onMounted, watch, ref } from "vue";
-  import { searhAlcohol } from "../store/actions";
-  import { useRoute } from "vue-router";
-  import axios from "axios";
   import meal from "../components/meal.vue";
   import store from "../store";
 
