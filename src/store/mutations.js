@@ -2,6 +2,11 @@ export  function setSearchMeals(state,meals){
     state.searhedMeals = meals
 }
 
+
+export  function searhedMealsLetter(state,meals){
+    state.searhedMealsLetter = meals
+}
+
 export  function searhedMealsIngridients(state,meals){
     state.searhedMealsIngridients = meals
 }
@@ -13,9 +18,7 @@ export  function searhedIngridients(state,meals){
 }
 
 
-export  function searhedMealsLetter(state,meals){
-    state.searhedMealsLetter = meals
-}
+
 
 export  function searhedMealsCategories(state,meals){
     state.searhedMealsCategories = meals
