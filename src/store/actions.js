@@ -7,7 +7,7 @@ import axios from "axios";
 export function searhMeal({commit},keywords){
     axiosClient.get(`search.php?s=${keywords}`)
     .then(({data})=>{
-
+        console.log('searhMealAction',data,data.meal)
         commit('setSearchMeals',data.meals)
     })
 }
