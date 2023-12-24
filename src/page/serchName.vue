@@ -22,6 +22,7 @@ function changeInput(){
 
 
 <template>
+<pre>{{meals}}</pre>
 <div class="w-full p-1">
   <input ref='keywords' value="salmon"    @input="changeInput" type="text" class="border-2 border-grey-200 block w-full" />
 </div>

@@ -28,7 +28,9 @@ let img = computed(() => {
 
 
 
-function getId(id){ return id.slice(38,id.indexOf('?type')) }
+function getId(id){ 
+  if(id){return id.slice(38,id.indexOf('?type')) }
+}
 
 let link = computed(() => {
 
