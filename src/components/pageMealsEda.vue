@@ -41,7 +41,6 @@
       <h1 class="font-bold text-lg my-5 text-center ">{{dataMeal.label}}</h1>
       <img class="xl:w-3/5 md:w-3/4" :src='dataMeal.image' alt="image meal">
       <p class="lg:m-8 font-mono text-base text-lg">{{ingridient}}</p>
-
       <p class="mt-5">{{dataMeal.summary}}</p>
       <div class="flex lg:m-8">
         <ul class="flex flex-col mt-2">
@@ -62,7 +61,7 @@
     @apply 2xl:px-56 xl:px-32 lg:px-28 md:border md:border-my-accent md:px-6 my-10 p-3 justify-center items-center flex flex-col rounded-md
   } 
   .contCard{
-      @apply 2xl:px-28 xl:px-24 lg:px-10 md:px-10
+    @apply 2xl:px-28 xl:px-24 lg:px-10 md:px-10
       
   }
 

@@ -2,7 +2,7 @@
   import { onMounted ,ref,computed} from "vue";
   import {axiosClient} from "../axiosClient";
   import store from '../store/index'
-  // import {router} from 'vue-router'
+
 
 
   let meals = computed(()=> store.state.searhedIngridients)

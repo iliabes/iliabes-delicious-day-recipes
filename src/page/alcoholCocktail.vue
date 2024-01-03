@@ -1,6 +1,6 @@
 <script setup>
   import { computed, onMounted, watch, ref } from "vue";
-  import meal from "../components/meal.vue";
+  import meal from "../components/mealEda.vue";
   import store from "../store";
   import { v4 as uuidv4 } from 'uuid';
 
@@ -19,7 +19,7 @@ onMounted(() => {
 
 
 <template>
-  <!-- <pre>{{dataMeal[0]}}</pre> -->
+  <!-- <pre>{{dataMeal[0].recipe.ingredientLines}}</pre> -->
   <div class="grid grid-cols-1 gap-1 m-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
     <meal
       :hash1="item.recipe.healthLabels[0]"
@@ -29,9 +29,9 @@ onMounted(() => {
       :img="item.recipe.image"
       :id="item._links.self.href"
       :title="item.recipe.label"
-      :key="idMeal"
-      :eda='true'
-      v-for="(item) in dataMeal"
+      :ingredientLines="item.recipe.ingredientLines"
+      :key="index"
+      v-for="(item,index) in dataMeal"
     />
   </div>
 </template>

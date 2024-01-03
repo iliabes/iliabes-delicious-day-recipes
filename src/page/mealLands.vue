@@ -1,9 +1,9 @@
 <script setup>
 import { computed, onMounted } from "vue";
-import meal from "../components/meal.vue";
+import meal from "../components/mealEda.vue";
 import store from "../store";
 
-let dataMeal = computed(() => store.state.searhedMealsLands);
+let dataMeal = computed(() => store.state.searhedMealsLands)
 
 let lands = ["asian", "american", "french", "italian", "indian", "mexican"];
 
@@ -19,9 +19,6 @@ function changeLand(land) {
 
 
 </script>
-
-
-
 <template>
   <div class="">
     <div class="flex flex-wrap  justify-center my-3 ">
@@ -44,10 +41,11 @@ function changeLand(land) {
       :description="item.recipe.instructionLines"
       :img="item.recipe.image"
       :id="item._links.self.href"
-      :eda='true'
       :title="item.recipe.label"
-      v-for="item in dataMeal"
-      :key="item"
+      :ingredientLines="item.recipe.ingredientLines"
+      :key="index"
+      v-for="item,index in dataMeal"
+      
     />
   </div>
 </template>

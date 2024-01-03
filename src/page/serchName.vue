@@ -8,7 +8,7 @@ onMounted(async () => {
   console.log("searhMeal", keywords.value.value);
 });
 
-let keywords = ref("");
+let keywords = ref("")
 let meals = computed(() => store.state.searhedMeals);
 
 function changeInput() {
@@ -18,7 +18,7 @@ function changeInput() {
 
 
 <template>
-  <pre>{{ meals[0] }}</pre>
+  <!-- <pre>{{ meals[0] }}</pre> -->
   <div class="w-full p-1">
     <input
       ref="keywords"
@@ -40,6 +40,7 @@ function changeInput() {
       :id="meal.idMeal"
       :key="meal.idMeal"
       :title="meal.strMeal"
+      :linkYoutube="meal.strYoutube"
       v-for="meal in meals"
     />
   </div>
