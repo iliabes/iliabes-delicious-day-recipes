@@ -1,10 +1,13 @@
 <script setup>
 import yotubeBtnVue from "./UI/yotubeBtn.vue";
-import { computed } from "vue";
+import { computed,onMounted } from "vue";
 
 
 
+onMounted(async () => {
 
+  console.log("mealEda!", props.id);
+});
 
 let img = computed(() => {
   if (props.img === undefined || props.img.length === "") {

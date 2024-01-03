@@ -5,7 +5,7 @@ import meal from "../components/meal.vue";
 
 onMounted(async () => {
   store.dispatch("searhMeal", keywords.value.value);
-  console.log("searhMeal", keywords.value.value);
+  console.log("searhMeal!", keywords.value.value);
 });
 
 let keywords = ref("")
