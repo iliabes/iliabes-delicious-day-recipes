@@ -17,7 +17,8 @@ let img = computed(() => {
 
 
 function getId(id){ 
-  if(id){return id.slice(38,id.indexOf('?type')) }
+  // if(id){return id.slice(38,id.indexOf('?type')) }
+  return '84b8126a7e5c3ceea9dcaee0f4d8df00'
 }
 
 let link = computed(() => {
@@ -29,7 +30,7 @@ let link = computed(() => {
 const props = defineProps({
   img: String,
   title: String,
-  id: [String],
+  id: String,
   hash1: {
     type: String,
     required: false,
@@ -49,11 +50,14 @@ const props = defineProps({
     type: Array
   }
 });
+
+
 </script>
 
 
 
 <template>
+
   <div
     class="rounded overflow-hidden shadow-lg bg-my-second hover:scale-105 duration-200 shadow"
   >

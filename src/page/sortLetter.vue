@@ -41,9 +41,9 @@ onMounted(async()=>{
         :id="item.idMeal"
         :title="item.strMeal"
         :key="item.idMeal"
+        :linkYoutube="meal.strYoutube"
         v-for="item in meals"
       />
-
   </div>
 </div>
 </template>
