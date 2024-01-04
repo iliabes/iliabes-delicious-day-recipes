@@ -19,7 +19,6 @@ onMounted(() => {
 
 
 <template>
-  <!-- <pre>{{dataMeal[0].recipe.ingredientLines}}</pre> -->
   <div class="grid grid-cols-1 gap-1 m-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
     <meal
       :hash1="item.recipe.healthLabels[0]"
@@ -33,6 +32,10 @@ onMounted(() => {
       :key="index"
       v-for="(item,index) in dataMeal"
     />
+
   </div>
+
 </template>
 
+
+    

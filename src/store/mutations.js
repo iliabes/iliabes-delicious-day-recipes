@@ -1,5 +1,4 @@
 export  function setSearchMeals(state,meals){
-    console.log('searhMealMutation',meals)
     state.searhedMeals = meals
 }
 

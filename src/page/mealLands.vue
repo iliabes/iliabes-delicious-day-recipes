@@ -32,7 +32,6 @@ function changeLand(land) {
       </button>
     </div>
   </div>
-
   <div class="grid grid-cols-1 gap-1 m-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
     <meal
       :hash1="item.recipe.healthLabels[0]"
